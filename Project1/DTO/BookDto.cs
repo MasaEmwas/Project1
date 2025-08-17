@@ -1,6 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace Project1.DTO;
+
 public class BookDto
 {
     public int? BookId { get; set; }
@@ -24,4 +25,5 @@ public class BookDto
     [Required]// should be removed? because its non-nullable in Book model
     [Range(0.01, double.MaxValue, ErrorMessage = "Price must be a positive value.")]
     public decimal Price { get; set; }
+    
 }
