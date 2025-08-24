@@ -84,13 +84,24 @@ public class BookService
 
         return query.ToList();
     }
+    public List<Book> GetByTitle(string keyword)
+    {
+
+        var query = _books.Where(b=>b.Title.Contains(keyword, StringComparison.OrdinalIgnoreCase)).ToList();
+
+        if (!query.Any())
+        {
+            return null;
+        }
+        return query.ToList();
+    }
 
     // We'll use these later; leaving them here is fine
     public Book Add(Book book)
     {
         book.BookId = _nextId++;
         _books.Add(book);
-        SaveToCsv();  
+        SaveToCsv();
         return book;
     }
     public Book? Update(int id, Book updated)
