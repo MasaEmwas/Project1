@@ -5,14 +5,9 @@ using System.Text;
 
 namespace BookCatalog.Services;
 
-public class TokenService
+public class TokenService(IConfiguration configuration)
 {
-    private readonly IConfiguration _configuration;
-
-    public TokenService(IConfiguration configuration)
-    {
-        _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-    }
+    private readonly IConfiguration _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
 
     public string Create(string username, string role)
     {
