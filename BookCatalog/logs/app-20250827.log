@@ -1,0 +1,8 @@
+2025-08-27 21:44:15.004 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-27 21:49:23.376 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-08-27 21:49:23.482 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-08-27 21:49:23.483 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-08-27 21:49:23.483 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-08-27 21:49:53.978 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-08-27 21:53:20.810 +03:00 [INF] BookCatalog.Controllers.BooksController Book deleted 13
+2025-08-27 22:01:29.073 +03:00 [INF] BookCatalog.Controllers.BooksController Book created 14 MEME

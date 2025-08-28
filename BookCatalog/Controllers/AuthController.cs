@@ -5,10 +5,9 @@ namespace BookCatalog.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AuthController : ControllerBase
+public class AuthController(TokenService tokenService) : ControllerBase
 {
-    private readonly TokenService _tokenService;
-    public AuthController(TokenService tokenService) => _tokenService = tokenService;
+    private readonly TokenService _tokenService = tokenService;
 
     public record LoginDto(string Username, string Password);
 
