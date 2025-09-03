@@ -9,9 +9,10 @@ namespace BookCatalog.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class BooksController(BookService bookService, ILogger<BooksController> logger) : ControllerBase
+public class BooksController(BookService bookService, BorrowService borrowService, ILogger<BooksController> logger) : ControllerBase
 {
     private readonly BookService _bookService = bookService;
+    private readonly BorrowService _borrowService = borrowService;
     private readonly ILogger<BooksController> _logger = logger;
 
     private static Book MapToBook(BookDto bookDto)
@@ -133,4 +134,74 @@ public class BooksController(BookService bookService, ILogger<BooksController> l
         _logger.LogInformation("Book deleted {BookId}", id);
         return NoContent();
     }
+
+
+
+
+    // added these actions for the borrowing and returning of books
+    // POST /api/books/{id}/borrow  -> current user borrows the book
+    [HttpPost("{id:int}/borrow")]
+    [Authorize]
+    public IActionResult Borrow(int id)
+    {
+        var userId = User?.Identity?.Name ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(userId))
+            return Problem(statusCode: 401, title: "Unauthorized", detail: "Login required.", instance: HttpContext.Request.Path);
+
+        if (!_borrowService.TryBorrow(userId, id, out var error))
+        {
+            return error switch
+            {
+                "Book not found."          => Problem(404, "Not Found", error, HttpContext.Request.Path),
+                "Book is already borrowed."=> Problem(409, "Conflict",   error, HttpContext.Request.Path),
+                _                          => Problem(400, "Bad Request", error, HttpContext.Request.Path)
+            };
+        }
+
+        _logger.LogInformation("Borrowed {BookId} by {UserId}", id, userId);
+        return NoContent();
+    }
+
+    // POST /api/books/{id}/return  -> current user returns it
+    [HttpPost("{id:int}/return")]
+    [Authorize]
+    public IActionResult Return(int id)
+    {
+        var userId = User?.Identity?.Name ?? string.Empty;
+        if (string.IsNullOrWhiteSpace(userId))
+            return Problem(statusCode: 401, title: "Unauthorized", detail: "Login required.", instance: HttpContext.Request.Path);
+
+        if (!_borrowService.TryReturn(userId, id, out var error))
+        {
+            return error switch
+            {
+                "Book not found."                         => Problem(404, "Not Found", error, HttpContext.Request.Path),
+                "Book is not currently borrowed."         => Problem(409, "Conflict",   error, HttpContext.Request.Path),
+                "Only the borrower can return this book." => Problem(403, "Forbidden",  error, HttpContext.Request.Path),
+                _                                         => Problem(400, "Bad Request", error, HttpContext.Request.Path)
+            };
+        }
+
+        _logger.LogInformation("Returned {BookId} by {UserId}", id, userId);
+        return NoContent();
+    }
+
+    // GET /api/books/{id}/history  -> full borrow/return log for this book
+    [HttpGet("{id:int}/history")]
+    [AllowAnonymous]
+    public IActionResult GetBookHistory(int id)
+    {
+        if (_bookService.GetById(id) is null)
+            return Problem(404, "Not Found", "Book not found.", HttpContext.Request.Path);
+
+        var history = _borrowService.GetBookHistory(id);
+        return Ok(history);
+    }
+
+    // tiny helper to keep Problem(...) calls concise
+    private ObjectResult Problem(int statusCode, string title, string detail, string instance)
+        => Problem(statusCode: statusCode, title: title, detail: detail, instance: instance);
+
+
+
 }

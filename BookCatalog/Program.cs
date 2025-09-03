@@ -23,7 +23,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<BookService>(); 
-builder.Services.AddSingleton<TokenService>(); 
+builder.Services.AddSingleton<TokenService>();
+builder.Services.AddSingleton<UserListsService>();
+builder.Services.AddSingleton<BorrowService>();
+
 
 var jwt = builder.Configuration.GetSection("Jwt");
 var signingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt["Key"]!));
@@ -87,7 +90,7 @@ app.UseExceptionHandler(errorApp =>
         context.Response.ContentType = "application/problem+json";
         await context.Response.WriteAsJsonAsync(problem);
     });
-});
+}); 
 
 if (app.Environment.IsDevelopment())
 {

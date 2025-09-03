@@ -1,0 +1,52 @@
+2025-09-01 11:18:44.824 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 11:51:31.752 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 11:51:31.857 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 11:51:31.858 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 11:51:31.864 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 11:57:23.625 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-09-01 12:03:22.822 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 13:17:07.251 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 13:17:07.336 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 13:17:07.337 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 13:17:07.338 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 13:17:27.077 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-09-01 13:28:32.830 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 13:28:49.377 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 13:28:49.470 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 13:28:49.472 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 13:28:49.472 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 13:28:59.443 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-09-01 13:28:59.732 +03:00 [INF] BookCatalog.Controllers.UsersController Favorite added admin@example.com 1
+2025-09-01 13:30:45.507 +03:00 [INF] BookCatalog.Controllers.UsersController Favorite added admin@example.com 2
+2025-09-01 13:31:28.428 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist added admin@example.com 1
+2025-09-01 13:31:32.911 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist added admin@example.com 2
+2025-09-01 13:37:03.214 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist removed admin@example.com 1
+2025-09-01 13:37:41.732 +03:00 [INF] BookCatalog.Controllers.UsersController Favorite removed admin@example.com 2
+2025-09-01 14:05:53.626 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist -> Favorites moved admin@example.com 2
+2025-09-01 14:06:28.547 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist added admin@example.com 1
+2025-09-01 14:06:52.909 +03:00 [INF] BookCatalog.Controllers.UsersController Wishlist -> Favorites moved admin@example.com 1
+2025-09-01 14:26:18.869 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 14:26:44.637 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 14:26:44.742 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 14:26:44.750 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 14:26:44.750 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 14:26:49.460 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 15:09:53.888 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 15:09:53.982 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 15:09:53.986 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 15:09:53.986 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 15:09:57.350 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 15:11:00.623 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 15:11:00.745 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 15:11:00.748 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 15:11:00.748 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 15:11:57.751 +03:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+2025-09-01 15:22:13.351 +03:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5104
+2025-09-01 15:22:13.535 +03:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+2025-09-01 15:22:13.536 +03:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+2025-09-01 15:22:13.537 +03:00 [INF] Microsoft.Hosting.Lifetime Content root path: /Users/masaemwas/Desktop/PracticeC#/Project1/BookCatalog
+2025-09-01 15:23:46.793 +03:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+2025-09-01 15:24:31.739 +03:00 [INF] BookCatalog.Controllers.BooksController Borrowed 1 by admin@example.com
+2025-09-01 15:24:51.361 +03:00 [INF] BookCatalog.Controllers.BooksController Returned 1 by admin@example.com
+2025-09-01 15:25:10.413 +03:00 [INF] BookCatalog.Controllers.BooksController Borrowed 3 by admin@example.com
+2025-09-01 15:25:15.064 +03:00 [INF] BookCatalog.Controllers.BooksController Borrowed 5 by admin@example.com
